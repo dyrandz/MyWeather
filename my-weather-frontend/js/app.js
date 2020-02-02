@@ -118,33 +118,3 @@ const populateWeatherTabList = (dateIndex, date, data) => {
 		);
 	});	
 }
-
-const populateWeatherTabListXXX = (dateIndex, date, data) => {
-	$.each(data.weatherTabs, function( index, value ) {
-		const list = data.list.filter(list => list.date === date);
-  		$('.widget-tab-content').append(
-  			`
-  			<div class="tab-pane fade show ${dateIndex === 0 ? 'active' : ''}" id="tab-${dateIndex}" role="tabpanel" aria-labelledby="tab-${dateIndex}"> 
-	  			<h5 align="center"> Hourly weather and forecasts </h5>
-				<div class="widget-hourly">
-		  			<div class="d-flex widget-row">
-						<div> 
-							<span> ${list.time} </span>
-							<img src="${list.icon}" alt="forecast" width="50" height="50"> 
-						</div>
-						<div> 
-							<p>
-								<span class="weather-hourly-temp"> ${list.temperature} </span>
-								<span class="weather-hourly-desc"> ${list.weather} </span>
-							</p>
-							<p>
-								${list.wind}  clouds: ${list.cloud}, ${list.pressure}
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			`
-  		);
-	});
-}
