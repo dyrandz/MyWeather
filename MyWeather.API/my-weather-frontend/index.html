@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Weather</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"> </script>
+
+	<link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-dark sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="#"><img src="assets/openweather-logo.png"></a>	
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Home</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+</nav>
+<!-- Search -->
+<div class="container">
+<div class="widget">
+	<div class="row search-location">
+		<div class="col-sm-12 text-center">
+			<form class="form-search">
+				<div class="search-bar">
+					<input type="search" class="form-control" id="search" placeholder="Enter Location">
+				</div>
+				<button type="submit" class="search-btn btn btn-primary">Submit</button>
+				<p>
+					To make it more precise put the city's name, comma, 2-letter country code
+				</p>
+			</form>
+		</div>
+	</div>
+	<h3 class="weather-title">Current weather and forecasts in your city </h3>
+	<div class="widget-result">
+		<div class="loader-container">
+			<div class="loader"></div>
+		</div>
+		<div class="row">
+			<div class="widget-current col-sm-4">
+				<h4>  Weather in <span class="locationName"><span></h4>
+				<h3> 
+					<img class="weather-current-img" src="" alt="icon" width="50" height="50">
+					<span class="widget-current-temp"></span>
+				</h3>
+				<p class="widget-current-cloudiness"></p>
+				<p class="widget-current-date"></p>
+				<div class="widget-current-grid">
+					<div class="d-flex widget-row">
+						<div> Wind </div>
+						<div> <span class="widget-current-wind"><span> </div>
+					</div>
+					<div class="d-flex widget-row">
+						<div> Cloudiness </div>
+						<div> <span class="widget-current-cloudiness"></span> </div>
+					</div>
+					<div class="d-flex widget-row">
+						<div> Pressure </div>
+						<div> <span class="widget-current-pressure"></span> </div>
+					</div>
+					<div class="d-flex widget-row">
+						<div> Humidity </div>
+						<div> <span class="widget-current-humidity"></span> </div>
+					</div>
+					<div class="d-flex widget-row">
+						<div> Sunrise </div>
+						<div> <span class="widget-current-sunrise"></span> </div>
+					</div>
+					<div class="d-flex widget-row">
+						<div> Sunset </div>
+						<div> <span class="widget-current-sunset"></span> </div>
+					</div>
+					<div class="d-flex widget-row">
+						<div> Geo coords </div>
+						<div> <span class="widget-current-coord"></span> </div>
+					</div>
+				</div>
+			</div>
+			<div class="widget-forecast col-sm-8">
+				<div class="container">
+					<ul class="weather-tabs nav nav-tabs" id="weather-hourly-tab" role="tablist">
+					</ul>
+					<div class="widget-tab-content tab-content">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="footer">
+	<div class="container-fluid">
+		<span class="text-muted"> weather 2020 </span>
+	</div>
+</footer>
+<script src="js/constants.js"></script>
+<script src="js/mapper.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
