@@ -4,7 +4,7 @@
 #back-end:  
 folder: MyWeather.API  
 port: 44324  
-tools used: .net core  
+tools used: .net core 3.0
 
 #front-end:  
 folder: my-weather-frontend  
